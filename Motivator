@@ -32,12 +32,11 @@
   </style>
 </head>
 <body>
-  <h1>Focus on your Career,You will achieve Everything!😊</h1>
-  <h2>Just wait for the right day, right time and the right Opportunity.</h2>
   <p id="quote">Click the button to get inspired!</p>
   <button onclick="generateQuote()">Get a Quote</button>
   <script>
     const quotes = [
+      "Just wait for the right day, right time and the right Opportunity."
       "Believe in yourself and all that you are.",
       "The future belongs to those who believe in the beauty of their dreams.",
       "Don't watch the clock; do what it does. Keep going.",
