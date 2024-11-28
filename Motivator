@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Random Quote Generator</title>
+  <title>Sequential Quote Generator</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -36,16 +36,18 @@
   <button onclick="generateQuote()">Get a Quote</button>
   <script>
     const quotes = [
-      "Just wait for the right day, right time and the right Opportunity."
+      "Just wait for the right day, right time and the right Opportunity.",
       "Believe in yourself and all that you are.",
       "The future belongs to those who believe in the beauty of their dreams.",
       "Don't watch the clock; do what it does. Keep going.",
       "The harder you work for something, the greater you'll feel when you achieve it.",
       "Success is not final, failure is not fatal: It is the courage to continue that counts."
     ];
+    let currentIndex = 0;
+
     function generateQuote() {
-      const randomIndex = Math.floor(Math.random() * quotes.length);
-      document.getElementById('quote').innerText = quotes[randomIndex];
+      document.getElementById('quote').innerText = quotes[currentIndex];
+      currentIndex = (currentIndex + 1) % quotes.length; // Loop back to the first quote
     }
   </script>
 </body>
